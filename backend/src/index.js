@@ -4,6 +4,7 @@ const cors = require('cors');
 const pool = require('./config/database');
 const expenseRoutes = require('./routes/expenseRoutes');
 const { errorHandler, notFoundHandler } = require('./middleware/errorHandler');
+const initializeDatabase = require('./scripts/init-db');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
